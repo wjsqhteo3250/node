@@ -1,0 +1,20 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "first node js",
+  "main": "module.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-mysql": "^0.4.2",
+    "orientjs": "^3.0.11",
+    "pug": "^3.0.0",
+    "uglify-js": "^3.11.4",
+    "underscore": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

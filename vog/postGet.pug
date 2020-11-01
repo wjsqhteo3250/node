@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+        h1
+            a(href="/topic") programing language learning list
+        ul
+            each topic in topics
+                li
+                        a(href=`/topic/${topic}`)= topic
+        form(action="/form_sub", method="post")
+            p
+                input(type='text' name='title')
+            p
+                textarea(name="desc", cols="30", rows="10")
+            p
+                input(type="submit")
