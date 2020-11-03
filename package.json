@@ -4,6 +4,7 @@
   "description": "first node js",
   "main": "module.js",
   "dependencies": {
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "node-mysql": "^0.4.2",
     "orientjs": "^3.0.11",
