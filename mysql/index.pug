@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        if topic
+            title= topic.title
+        else
+            title welcome
+    body
+        h1
+            a(href="/topic") programing language learning list
+        ul
+            each to in topics
+                li
+                    a(href=`/topic/${to.id}`)= to.title
+        if topic
+            h2= topic.title
+            p= topic.description
+            if topic.author
+                p= 'by '+topic.author
+        else
+            h2 welcom
+            | This is server side javascript tutorial
+    div
+        a(href="/topic/add") add /
+        if topic
+            a(href="/topic/"+topic.id+"/edit")  edit /
+            a(href="/topic/"+topic.id+"/delete")  delete /

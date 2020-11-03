@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title edit
+    body
+        h1
+            a(href="/topic") programing language learning list
+        ul
+              each topic in topics
+                li
+                    a(href=`/topic/${topic.id}`)= topic.title
+        h2 are you sure?
+        form(action="/topic/"+topic.id+"/delete", method="post")
+            p
+                input(type="submit" value="YES")
+            a(href="/topic/"+topic.id) NO

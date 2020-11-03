@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title edit
+    body
+        h1
+            a(href="/topic") programing language learning list
+        ul
+              each topic in topics
+                li
+                    a(href=`/topic/${topic.id}`)= topic.title
+        form(action="/topic/"+topic.id+"/edit", method="post")
+            p
+                input(type='text', name='title', placeholder='title' value=topic.title)
+            p
+                textarea(name="desc", cols="30", rows="10", placeholder='description')= topic.description
+            p
+                input(type='text', name='author' placeholder='author' value=topic.author)
+            p
+                input(type="submit")
